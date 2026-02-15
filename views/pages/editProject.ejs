@@ -1,0 +1,53 @@
+<%layout('/layout/boilerplate.ejs')%>
+<body>
+   <div class="row">
+        <div class="col-8 offset-2 projectform-container" style="margin-top:-80px; margin-bottom: 80px;">
+            <h1 style="color: #ff6a00;"><b>Edit Project</b></h1>
+            <form action="/home/main/project/<%=projectDetail.id%>/edit?_method=PATCH" method="post" novalidate class="needs-validation">
+                
+                <div class="col mb-3">
+                    <label for="title" class="form-label">Title : </label>
+                     <input 
+                     type="text"
+                     name="title"
+                     placeholder="Enter the title of project"
+                     class="form-control" 
+                     required 
+                     value="<%=projectDetail.title%>">
+                     <div class="invalid-feedback">Please enter the title</div>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="description" class="form-label">Description : </label>
+                     <textarea rows="5" type="text" name="description" placeholder="Enter the Description of project" class="form-control" value="<%=projectDetail.description%>" required ></textarea>
+                     <div class="invalid-feedback">Enter a short Description</div>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="image" class="form-label">Image (url) :</label>
+                     <input 
+                     type="text"
+                     name="image"
+                     placeholder="Enter the image in url format"
+                     class="form-control"
+                     value="<%=projectDetail.image.url%>"
+                     required>
+                     <div class="invalid-feedback">Enter a image url</div>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="gitLink" class="form-label">GitHub link : </label>
+                     <input 
+                     type="text"
+                     name="gitLink"
+                     placeholder="Enter the GitHub link"
+                     class="form-control"
+                     value="<%=projectDetail.gitLink%>"
+                     required>
+                     <div class="invalid-feedback">Enter project github link</div>
+                </div><br>
+                <button class="btn btn-outline-warning" style="width: 100%;">Enter</button>
+            </form>
+        </div>
+      </div>
+</body>

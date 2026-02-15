@@ -1,0 +1,43 @@
+<%layout('/layout/boilerplate.ejs')%>
+
+<body>
+    <h1 class="text-center mt-5">Projects</h1>
+        <div class="row">
+            <div class="col  mt-5 mb-5" style="width: 90%;">
+                <% for(let project of projects) { %>
+                <div class="col-10 offset-1 card mb-3">
+                        <img src="<%= project.image.url %>" class="card-img-top" alt="<%= project.title %>" style="height: 500px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: rgb(255, 153, 0) !important;"><b><%= project.title %></b></h5>
+                            <p class="card-text"><%= project.description %></p>
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                            <p class="card-link" style="color: white;">GitHub Link : <a href=""><%= project.gitLink %></a></p>
+                        </div>
+                        
+                        <div class="row">
+
+                        <div class="col-2">
+                        <form action="/home/main/project/<%=project.id%>/edit" method="get">
+                            <button class="btn btn-light" style="margin : 2rem;">Edit</button>
+                        </form>
+                        </div>
+
+                        <div class="col-2">
+                        <form action="/home/main/project/<%=project.id%>/delete?_method=DELETE" method="post">
+                            <button class="btn btn-light" style="margin-top: 2rem;" >Delete</button>
+                        </form>
+                        </div>
+
+                        </div>
+                </div>
+                <% } %>
+                
+                <div class="col-2 offset-1">
+                <form action="/home/main/project/add" method="get">
+                    <button class="btn btn-light mt-3">Add Project</button>
+                </form>
+                </div>
+
+            </div>
+        </div>
+</body>

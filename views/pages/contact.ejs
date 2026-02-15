@@ -1,0 +1,92 @@
+<%layout("/layout/boilerplate.ejs")%>
+
+<body>
+    <h1 class="text-center mt-5">Get In Touch</h1>
+    <p class="text-center text-muted" style="color: white !important;">
+    I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+    </p>
+
+    <div class="container mt-4">
+  <div class="row text-center contact-container">
+
+    <div class="col-md-4">
+      <h5>Email</h5>
+      <p>sumitkumarsharma7294@gmail.com</p>
+    </div>
+
+    <div class="col-md-4">
+      <h5>Phone</h5>
+      <p>+91 7294892174</p>
+    </div>
+
+    <div class="col-md-4">
+      <h5>Location</h5>
+      <p>India</p>
+    </div>
+
+  </div>
+</div>
+ <!-- Social Media -->
+  <div class="text-center mt-4">
+  <a href="https://github.com/SumitSharma1071" class="btn btn-dark m-2">GitHub</a>
+  <a href="https://www.linkedin.com/in/sumit-sharma-574550341" class="btn btn-primary m-2">LinkedIn</a>
+</div>
+<!-- Contact Form -->
+
+<div class="container mt-5 mb-5 contact-container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      
+      <% if(message) { %>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= message %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <% } %>
+
+      <form action="/home/contact" method="post" novalidate class="needs-validation">
+
+        <div class="mb-3">
+          <label class="form-label" for="name" style="color: white !important;">Full Name :</label>
+          <input 
+          type="text" 
+          class="form-control" 
+          name="name" 
+          placeholder="Enter your name" 
+          required 
+          style="background-color: transparent; color: white !important;">
+          <div class="invalid-feedback">Please enter your full name.</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="email" style="color: white !important;">Email address :</label>
+          <input 
+          type="email" 
+          class="form-control" 
+          name="email" 
+          placeholder="Enter your email" 
+          required
+          style="background-color: transparent; color: white !important;">
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="purpose" style="color: white !important;">Purpose Of Contact :</label>
+          <textarea 
+          class="form-control" 
+          name="purpose" 
+          rows="4" 
+          placeholder="Write your purpose" 
+          required
+          style="background-color: transparent; color: white !important;"></textarea>
+          <div class="invalid-feedback">Please enter your purpose.</div>
+        </div>
+
+        <button type="submit" class="btn btn-warning w-100">
+          Send Message
+        </button>
+    </form>
+    </div>
+  </div>
+</div>
+</body>

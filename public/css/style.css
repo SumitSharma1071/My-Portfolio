@@ -1,0 +1,170 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: linear-gradient(135deg, #000000, #1a1a1a, #ff6a00);
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.margin-bot{
+    margin-bottom: 10px !important;
+}
+/* Navbar styling */
+.navbar{
+    width: 100vw !important;
+    height: 80px;
+    top: 0;
+}
+
+.navbar a{
+    color : white;
+}
+.navbar .image img{
+    height: 80px;
+    width: 80px;
+}
+.contact{
+    margin-right: 20px;
+}
+.contact:hover, .Home:hover{
+    color: #d0d0d0 !important;
+}
+
+/* footer */
+.f-info{ 
+    height: 80px !important;
+    box-sizing: border-box;
+    /* position: fixed; */
+    bottom: 0 !important;
+    left: 0;
+    background-color :transparent; 
+    color: white; 
+    padding: 20px 0; 
+    text-align: center; 
+    width: 100%;
+}
+.f-link a{
+    margin: 0 5px;
+    text-decoration: none;
+    color: rgb(175, 174, 174);
+}
+.f-link a:hover{ color: #fd7e14; text-decoration: underline; }
+.f-socialMedia i{
+    color: #ffffff;
+    font-size: larger;
+    transition: 0.3s;
+}
+.f-socialMedia i:hover{
+    color: #fd7e14;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Body */
+body h1{
+    color: #ff6a00;
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 20vh;
+}
+.btn-container button{ 
+    background-color: #ff6a00; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer; 
+    transition: 0.3s; 
+    margin-top: 1.5rem;
+} 
+.btn-container button:hover{ 
+    background-color: #ec7018;
+}
+.home-image img{
+    width: 45% !important;
+    height: 45% !important;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #5e5e5e;
+    border-radius:50%;
+    margin-top: 7rem;
+    margin-left: 12rem;
+    box-shadow: 0 0 8px #ff6a00;
+}
+.home-image img:hover{ transform: scale(1.05); transition: 0.3s; }
+.home-image img img{ width: 80%; height: 80%; border-radius: 50%; }    
+
+/* Main Page */
+.container-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10vh;
+}
+.main-container{
+    width: 100%;
+    padding: auto;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.container-3 .card-parent{
+    margin-bottom: 20px;
+    margin-left: 0rem;
+}
+.card{
+    background-color: transparent !important;
+    border: 1px solid #5e5e5e;
+    box-shadow: 0 0 8px #ff6a00;
+}
+.card-title{
+    color: #d3d3d3 !important;
+}
+.card-text{
+    color: #ffffff !important;
+}
+.skills-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Contact Page */
+.contact-container h5{
+    color: #e2ac85;
+
+}
+.contact-container p{
+    color: #ffffff;
+}
+.contact-container input::placeholder{
+    color: rgb(184, 184, 184) !important;
+}
+.contact-container textarea::placeholder{
+     color: rgb(184, 184, 184) !important;
+}
+
+/* Project Add Form */
+.projectform-container label{
+    color: white !important;
+}
+.projectform-container input, .projectform-container textarea{
+    color: #ff8b39 !important;
+}
+.projectform-container input, .projectform-container textarea{
+    background-color: transparent !important;
+}
+.projectform-container input::placeholder{
+    color: rgb(184, 184, 184) !important;
+}
+.projectform-container textarea::placeholder{
+     color: rgb(184, 184, 184) !important;
+}

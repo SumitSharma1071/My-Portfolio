@@ -28,6 +28,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.engine('ejs', ejsMate);
 
+app.get('/', (req, res) =>{
+    res.redirect('/home');
+});
+
 // Home Route
 app.get('/Home', (req, res) =>{
     res.render('pages/home.ejs');

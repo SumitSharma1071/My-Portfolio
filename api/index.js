@@ -75,8 +75,7 @@ app.get('/contact', (req, res) =>{
 app.get('/main/project', async (req, res) =>{
     try{
         const projects = await Project.find({});
-        console.log(projects);
-        res.render('pages/project.ejs', {projects : projects});
+        res.render('pages/project', {projects});
     }catch(err){
         res.status(500).send('Internal Server Error');
     }

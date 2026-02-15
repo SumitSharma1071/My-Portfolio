@@ -10,15 +10,18 @@ const { title } = require('process');
 const methodOverride = require('method-override');
 
 // Connect to MongoDB
-async function main(){
-    await mongoose.connect('mongodb://127.0.0.1:27017/myportfolio');
-}
-main()
-.then(() =>{
-    console.log('Connected to MongoDB');
-}).catch((err) =>{
-    console.log('Error Connecting to MongoDB:', err);
-});
+// async function main(){
+//     await mongoose.connect('mongodb://127.0.0.1:27017/myportfolio');
+// }
+// main()
+// .then(() =>{
+//     console.log('Connected to MongoDB');
+// }).catch((err) =>{
+//     console.log('Error Connecting to MongoDB:', err);
+// });
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log("DB Connected"))
+  .catch(err => console.log(err));
 
 app.use(express.urlencoded({extended : true}));
 app.use(express.json());

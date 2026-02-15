@@ -17,13 +17,13 @@
                         <div class="row">
 
                         <div class="col-2">
-                        <form action="/home/main/project/<%=project.id%>/edit" method="get">
+                        <form action="/main/project/<%=project.id%>/edit" method="get">
                             <button class="btn btn-light" style="margin : 2rem;">Edit</button>
                         </form>
                         </div>
 
                         <div class="col-2">
-                        <form action="/home/main/project/<%=project.id%>/delete?_method=DELETE" method="post">
+                        <form action="/main/project/<%=project.id%>/delete?_method=DELETE" method="post">
                             <button class="btn btn-light" style="margin-top: 2rem;" >Delete</button>
                         </form>
                         </div>
@@ -33,7 +33,7 @@
                 <% } %>
                 
                 <div class="col-2 offset-1">
-                <form action="/home/main/project/add" method="get">
+                <form action="/main/project/add" method="get">
                     <button class="btn btn-light mt-3">Add Project</button>
                 </form>
                 </div>

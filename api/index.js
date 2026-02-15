@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const Project = require('./models/Project');
-const Contact = require('./models/contact');
+const Project = require('../models/Project');
+const Contact = require('../models/contact');
 const ejs = require('ejs');
 let path = require('path');
 const ejsMate = require('ejs-mate');
@@ -25,25 +25,23 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.set("views", path.join(__dirname, "../views"));
+app.use(express.static(path.join(__dirname, "../public")));
 app.engine('ejs', ejsMate);
 
-app.get('/', (req, res) =>{
-    res.redirect('/home');
-});
 
 // Home Route
-app.get('/Home', (req, res) =>{
+app.get('/', (req, res) =>{
     res.render('pages/home.ejs');
 });
 
 // Admin Route
-app.get('/home/admin', (req, res) =>{
+app.get('/admin', (req, res) =>{
     res.send('Admin Page');
 });
 
 // Main Route
-app.get('/home/main', (req, res) =>{
+app.get('/main', (req, res) =>{
    res.render('pages/main.ejs');
 })
 // Contact Route
@@ -52,18 +50,18 @@ app.get('/home/main', (req, res) =>{
 // });
 
 // Contact Form Submission
-app.post('/home/contact', async (req, res) =>{
+app.post('/contact', async (req, res) =>{
     try{
         const {name, email, purpose} = req.body;
         const contact = new Contact({name : name, email : email, purpose : purpose});
        let savedContact = await contact.save();
-        res.redirect('/home/contact?success=1');
+        res.redirect('/contact?success=1');
     }catch(err){
         res.status(500).send('Internal Server Error');
     }
 });
 
-app.get('/home/contact', (req, res) =>{
+app.get('/contact', (req, res) =>{
     let {success} = req.query;
     const message = success ? "Contact form submitted successfully!" : null;
      res.render('pages/contact.ejs', {message});
@@ -71,7 +69,7 @@ app.get('/home/contact', (req, res) =>{
 
 
 // Project Routes
-app.get('/home/main/project', async (req, res) =>{
+app.get('/main/project', async (req, res) =>{
     try{
         const projects = await Project.find({});
         console.log(projects);
@@ -82,11 +80,11 @@ app.get('/home/main/project', async (req, res) =>{
 });
 
 // Add Project
-app.get('/home/main/project/add', (req, res) =>{
+app.get('/main/project/add', (req, res) =>{
     res.render('pages/newProject.ejs');
 });
 
-app.post('/home/main/project/add', async (req, res) =>{
+app.post('/main/project/add', async (req, res) =>{
     let { title, description, image, gitLink } = req.body;
     try{
         let project = new Project({
@@ -98,32 +96,32 @@ app.post('/home/main/project/add', async (req, res) =>{
         gitLink : gitLink
     });
     await project.save();
-    res.redirect('/home/main/project');
+    res.redirect('/main/project');
     }catch(err){
         res.status(500).send("Backend error");
     }
 }); 
 
 // Edit Route
-app.get('/home/main/project/:id/edit', async (req, res) => {
+app.get('/main/project/:id/edit', async (req, res) => {
     let {id} = req.params;
     let projectDetail = await Project.findById(id);
     res.render('pages/editProject.ejs', {projectDetail});
 });
 
-app.patch('/home/main/project/:id/edit', async (req, res) =>{
+app.patch('/main/project/:id/edit', async (req, res) =>{
     let {id} = req.params;
     let {title, description, image, gitLink} = req.body;
     await Project.findByIdAndUpdate(id, {title : title, description : description, image : {url : image}, gitLink : gitLink});
-    res.redirect('/home/main/project');
+    res.redirect('/main/project');
 });
 
 // Delete Route
 
-app.delete('/home/main/project/:id/delete', async (req, res) =>{
+app.delete('/main/project/:id/delete', async (req, res) =>{
     let {id} = req.params;
     await Project.findByIdAndDelete(id);
-    res.redirect('/home/main/project');
+    res.redirect('/main/project');
 });
 
 // App Listening

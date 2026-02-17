@@ -1,16 +1,19 @@
-<nav class="navbar navbar-expand-lg bg-body-ligth border-bottom">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><div class="image"><img src="/assets/logo.png" alt="Logo"></div></a>
+<nav class="navbar navbar-expand-sm sticky-top">
+  <div class="container-fluid" style="width: 100% !important;">
+    <a class="navbar-brand" href="#" style="color: white !important;">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link Home" aria-current="page" href="/">Home</a>
+      <div class="navbar-nav" style="width: 100%;">
+       <a class="nav-link active" aria-current="page" href="/" style="color: white !important;">Home</a>
+       <!-- <a class="nav-link active text-start" aria-current="page" href="/main" style="color: white !important;">Profile</a> -->
+        <div class="contact-login">
+            <a href="/contact">Contact</a>
+            <a href="/main/project"><button class="btn btn-outline-primary">Project</button></a>
+            <a href="/admin"><button class="btn btn-outline-light">Admin</button></a>
+        </div>
       </div>
     </div>
-     <form action="/admin" method="get">
-    <button class="btn btn-outline-light">Admin login</button>
-     </form>
   </div>
 </nav>

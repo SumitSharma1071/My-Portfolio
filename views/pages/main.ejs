@@ -1,143 +1,129 @@
 <% layout('/layout/boilerplate.ejs')%>
 
 <body>
- <div class="row row-cols-xl-1 row-cols-md-1 row-cols-sm-1 main-container  mb-5 margin-bot" style="margin-top: -100px;" >
-    
-    <div class="row">
-        <div class="col-12 container-1" style="width: 100%; height: auto;">
-        <div class="col-7 offset-1 mt-0" >
-            <h1>Hi, I am Sumit Sharma</h1>
-            <h3 style="color: white;">MERN Stack Developer</h3>
-            <p style="color: white;">I build modern and responsive web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).</p>
-        </div>
-        <div class="col-6 offset-1 mt-0">
-            <img src="/assets/sumit.png" alt="Profile Image" class="img-fluid rounded-circle" style="max-width: 200px; height: 200px; object-fit: cover; margin-top: 8rem;">
-        </div>
+        <div class="container">
+  <div class="row mt-4 g-4">
+
+    <!-- Text Section -->
+    <div class="col-8">
+      <h2 class="hero-title">Hi, I am Sumit Kumar Sharma</h2>
+      <p class="p-title">MERN Stack Developer</p>
     </div>
+
+    <!-- Image Section -->
+    <div class="col-4 text-end ms-auto">
+      <img src="/assets/sumitBest.png" 
+           class="img-fluid rounded profile-img"
+           style="margin-bottom: 100px;" 
+           alt="Sumit Profile">
     </div>
-    
-    <div class="row">
-        <div class="col container-2" style="width: 100%; height: auto;">
-        <div class="col-10 offset-1">
-        <h2 style="color: #ff6a00;">Career Objective</h2>
-        <p style="color: white;">I'm a passionate MERN stack developer who loves building modern web applications.
-            I enjoy solving real-world problems using JavaScript and creating responsive user interfaces.
-            Currently improving my backend skills and working on full-stack projects.</p>
+
+    <div class="career-container" style="margin-top: -70px;">
+      <div class="row">
+        <div class="col">
+          <h2 class="hero-title">Career Objective</h2>
+          <p class="text">Passionate and detail-oriented MERN Stack Developer with strong foundation in MongoDB, Express.js, React.js, and Node.js. Seeking an opportunity to contribute to innovative web development projects while continuously enhancing my technical and problem-solving skills. Eager to work in a growth-oriented organization where I can build scalable applications and deliver impactful user experiences.</p>
         </div>
+      </div>
     </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-6 offset-1 mt-2">
-            <h2 style="color: #ff6a00;">Educational Qualification</h2>
-        </div>
-        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 container-3 " >
-            <div class="col-6 offset-1 card-parent">
-            <div class="card " style="width: 27rem;">
+
+    <!-- Educational Qualification -->
+    <div class="edu-conatainer" style="margin-bottom: 100px;">
+    <div class="col max-auto">
+      <h2 class="hero-title">Educational Qualifiacation</h2>
+    <div class="row  row-cols-1 row-cols-md-2 g-4">
+      <!-- Card1 -->
+      <div class="col">
+          <div class="card h-100">
             <div class="card-body">
-                <h5 class="card-title">Master's Degree in Computer Science</h5>
-                <h6 class="card-subtitle mb-2" style="color: rgb(125, 125, 125);">Presidency College (Autonomous), Bengaluru</h6>
-                <p class="card-text">Completed my Master's degree in Computer Science with a focus on web development and software engineering.</p>
-                <b style="color: whitesmoke;" class="card-link"><i>CGPA :</i>8.3</b> 
-                <a href="" class="card-link" style="text-decoration: none; color: white;">2024-2026</a> 
+              <h5 class="card-title">Master in Computer Application</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Presidency College (Autonomous)</h6>
+              <p class="card-text">I am currently pursuing a Master of Computer Applications (MCA) with a strong interest in software development and modern web technologies.</p>
+              <Pre>Duration : <b>2024-2026</b></Pre>
             </div>
-            </div>
-            </div>
-
-            <div class="col-6 offset-1">
-            <div class="card" style="width: 27rem;">
-            <div class="card-body">
-                <h5 class="card-title">Bachelor's Degree in Science (Mathematics)</h5>
-                <h6 class="card-subtitle mb-2" style="color: rgb(125, 125, 125);">FS University, Sikohabad</h6>
-                <p class="card-text">Completed my Bachelor's degree in Science (Mathematics) with a focus on problem-solving and analytical thinking.</p>
-                <b style="color: whitesmoke;" class="card-link"><i>CGPA :</i>6.9</b>
-                <a href="" class="card-link" style="text-decoration: none; color: white;">2021-2024</a>
-            </div>
-            </div>
-            </div>
-
+          </div>
+      </div>
+      <!-- card2 -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Bachelor's of Science (Mathematics)</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">FS University, Sikohabad (Uttar Pradesh)</h6>
+            <p class="card-text">I have completed my Bachelor of Science in Mathematics, where I developed strong analytical, logical reasoning, and problem-solving skills.</p>
+            <pre>Duration : <b>2021-2024</b>           CGPA : <b>6.9</b></pre>
+          </div>
         </div>
+      </div>
+
     </div>
-    
-    <!-- Skiils -->
-        <div class="row">
-        <div class="col-6 offset-1 mt-2">
-            <h2 style="color: #ff6a00;">Skills</h2>
-        </div>
+    </div>
+    </div>
 
-        <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 container-3 " style="margin-left: 6rem;">
+    <!-- Skills -->
+     <div class="edu-conatainer" style="margin-bottom: 100px; margin-top: -50px;">
+    <div class="col max-auto">
+      <h2 class="hero-title">Technical Skills</h2>
+    <div class="row  row-cols-1 row-cols-md-2 g-4">
+      <!-- Card1 -->
+      <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Frontend Technologies</h5>
+              <p class="card-text">Skilled in frontend technologies including <b>HTML5, CSS, and JavaScript</b>, with experience in building responsive and user-friendly web interfaces using modern frameworks like <b>React and Bootstrap</b>.</p>
+            </div>
+          </div>
+      </div>
+      <!-- card2 -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Backend Technologies</h5>
             
-            <div class="col-6 offset-1 card-parent">
-            <div class="card " style="width: 27rem;">
-            <div class="card-body">
-                <h5 class="card-title">Languages</h5>
-                <p class="card-text">Proficient in Java (OOPs, Collections, Multithreading), C++, JavaScript (ES6+), Python.</p>
-            </div>  
-            </div>
-            </div>
-            
-            <div class="col-6 offset-1 card-parent">
-            <div class="card " style="width: 27rem;">
-            <div class="card-body">
-                <h5 class="card-title">Frontend Development</h5>
-                <p class="card-text">Proficient in React.js, HTML5, CSS3, and JavaScript to create responsive and user-friendly interfaces.</p>
-            </div>  
-            </div>
-            </div>
-
-            <div class="col-6 offset-1 card-parent">
-            <div class="card " style="width: 27rem;">
-            <div class="card-body">
-                <h5 class="card-title">Backend Development</h5>
-                <p class="card-text">Experienced in Node.js, Express.js, and MongoDB to build scalable and efficient backend systems.</p>
-            </div>  
-            </div>
-            </div>
-
-            <div class="col-6 offset-1 card-parent">
-            <div class="card " style="width: 27rem;">
-            <div class="card-body">
-                <h5 class="card-title">Database Management</h5>
-                <p class="card-text">Proficient in working with MongoDB and SQL databases to design and manage data structures effectively.</p>
-            </div>  
-            </div>
-            </div>
-
-            <div class="col-6 offset-1 card-parent mt-0">
-            <div class="card " style="width: 27rem;">
-            <div class="card-body">
-                <h5 class="card-title">Framework</h5>
-                <p class="card-text">Proficient in working with React.js, Node.js, Bootstrap, Express.js, and MongoDB to build scalable and efficient web applications.</p>
-            </div>  
-            </div>
-            </div>
-
-            <div class="col-6 offset-1 card-parent">
-            <div class="card " style="width: 27rem;">
-            <div class="card-body">
-                <h5 class="card-title">Tools</h5>
-                <p class="card-text">Proficient in working with VS Code, Git, GitHub, and Postman for development and version control.</p>
-            </div>  
-            </div>
-            </div>
-
+            <p class="card-text">Proficient in backend development using <b>Node.js and Express.js</b>, with experience in building <b>RESTful APIs</b>, managing databases like <b>MongoDB</b>, and implementing secure authentication systems.</p>
+           </div>
         </div>
+      </div>
+      <!-- Card3 -->
+       <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Databases</h5>
+            <p class="card-text">Experienced in working with <b>MongoDB and MySQL</b> for designing, managing, and optimizing databases. Skilled in implementing CRUD operations and integrating databases with backend applications.</p>
+          </div>
         </div>
-
-        <div class="row mt-4" style="display: flex;">
-            <div class="col-2 offset-1">
-                <form action="/contact" method="get">
-                    <button class="btn btn-outline-light">Hire me</button>
-                </form>
-            </div>
-            <div class="col-4 offset-2">
-                <button class="btn btn-outline-light">Download Resume</button>
-            </div>
-            <div class="col-2">
-            <form action="/main/project" method="get">
-                <button class="btn btn-outline-light">View Projects</button>
-            </form>
+      </div>
+      <!-- card 4 -->
+       <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Programming Languages</h5>
+            <p class="card-text">I have proficiency in multiple programming languages including <b>JavaScript, Java, and C/C++</b>. My strong understanding of programming fundamentals enables me to write clean, optimized, and maintainable code.</p>
+          </div>
         </div>
+      </div>
+      <!-- card 5 -->
+       <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">FrameWorks</h5>
+            <p class="card-text">I have hands-on experience working with modern web frameworks to build scalable, responsive, and high-performance applications. I use frontend frameworks like <b>React.js and Bootstrap</b> to create dynamic and user-friendly interfaces, and backend frameworks such as <b>Express.js</b> to develop secure and efficient server-side applications.</p>
+          </div>
+        </div>
+      </div>
+      <!-- card 6 -->
+       <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Tools</h5>
+            <p class="card-text">I utilize a variety of development tools to enhance productivity, maintain code quality, and streamline the software development process. I am proficient in using code editors, version control systems, and API testing tools to efficiently build, test, and deploy applications. Like : <b>VS code, Git and GitHub, Hoopscoth, npm , MongoDB compass</b></p>
+          </div>
+        </div>
+      </div>
 
- </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+
 </body>

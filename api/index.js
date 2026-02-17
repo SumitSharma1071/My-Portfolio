@@ -8,7 +8,7 @@ let path = require('path');
 const ejsMate = require('ejs-mate');
 const { title } = require('process');
 const methodOverride = require('method-override');
-require('dotenv').config();
+require('dotenv').config({ path: require('path').join(__dirname, '../.env') });
 // Connect to MongoDB
 // async function main(){
 //     await mongoose.connect('mongodb://127.0.0.1:27017/myportfolio');
@@ -128,5 +128,3 @@ app.delete('/main/project/:id/delete', async (req, res) =>{
 
 // App Listening
 module.exports = app;
-
-

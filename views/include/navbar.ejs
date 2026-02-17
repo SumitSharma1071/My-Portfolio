@@ -1,18 +1,32 @@
-<nav class="navbar navbar-expand-sm sticky-top">
-  <div class="container-fluid" style="width: 100% !important;">
-    <a class="navbar-brand" href="#"><div class="image"><img src="/assets/logo.png" alt="Logo"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="/assets/logo.png" alt="Logo" height="60">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Nav Links -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav" style="width: 100%;">
-       <a class="nav-link active" aria-current="page" href="/" style="color: white !important;">Home</a>
-       <!-- <a class="nav-link active text-start" aria-current="page" href="/main" style="color: white !important;">Profile</a> -->
-        <div class="contact-login">
-            <a href="/contact">Contact</a>
-            <a href="/main/project"><button class="btn btn-outline-primary">Project</button></a>
-            <a href="/admin"><button class="btn btn-outline-light">Admin</button></a>
+      <div class="navbar-nav w-100">
+
+        <!-- Left Side -->
+        <a class="nav-link active" href="/">Home</a>
+
+        <!-- Right Side -->
+        <div class="ms-auto d-flex align-items-center gap-3">
+          <a href="/contact" class="text-white text-decoration-none">Contact</a>
+          <a href="/main/project" class="btn btn-outline-primary">Project</a>
+          <a href="/admin" class="btn btn-outline-light">Admin</a>
         </div>
+
       </div>
     </div>
   </div>

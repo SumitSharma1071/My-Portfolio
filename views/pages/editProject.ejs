@@ -1,7 +1,7 @@
 <%layout('/layout/boilerplate.ejs')%>
 <body>
    <div class="row">
-        <div class="col-8 offset-2 projectform-container" style="margin-top:-80px; margin-bottom: 80px;">
+        <div class="col-8 offset-2 projectform-container" style="margin-top:80px; margin-bottom: 80px;">
             <h1 style="color: #ff6a00;"><b>Edit Project</b></h1>
             <form action="/main/project/<%=projectDetail.id%>/edit?_method=PATCH" method="post" novalidate class="needs-validation">
                 

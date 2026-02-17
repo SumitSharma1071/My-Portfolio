@@ -128,3 +128,7 @@ app.delete('/main/project/:id/delete', async (req, res) =>{
 
 // App Listening
 module.exports = app;
+
+app.listen(8080, (req, res) =>{
+    console.log("Server is listening at 8080");
+});
